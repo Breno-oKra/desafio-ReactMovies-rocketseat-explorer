@@ -1,8 +1,8 @@
 <h1 align="center"> Chaallenge ReactMovies of Project React Notes of the explorer rocketseat
 </h1>
 <div display="flex" align="center">
-    <img width="400px" alt="" src="./src//assets//project/singUp.png" />
-    <img width="400px" alt="" src="./src//assets//project/singIn.png" />
+    <img width="400px" alt="" src="./src//assets//project/singup.png" />
+    <img width="400px" alt="" src="./src//assets//project/singin.png" />
 </div>
 
 
