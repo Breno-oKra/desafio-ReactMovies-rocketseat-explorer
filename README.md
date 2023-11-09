@@ -5,6 +5,7 @@
     <img width="400px" alt="" src="./src//assets//project/singin.png" />
 </div>
 
+- code backend: https://github.com/Breno-oKra/API-NODE-rocketseat-explorer-desafio
 
 
 ## 🚀 Techniques
