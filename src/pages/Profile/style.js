@@ -12,12 +12,14 @@ export const Container = styled.div`
     align-items: center;
     padding: 0 124px;
 
-    > a{
+    > button{
       display: flex;
       justify-content: center;
       align-items: center;
       font-size: 16px;
       gap: 8px;
+      background: none;
+      border: none;
       color: ${({ theme }) => theme.COLORS.ORANGE};
       > svg {
         color: ${({ theme }) => theme.COLORS.ORANGE};

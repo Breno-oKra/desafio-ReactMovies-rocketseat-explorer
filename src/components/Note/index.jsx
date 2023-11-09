@@ -2,9 +2,9 @@ import { Stars } from "../Stars";
 import { Tag } from "../Tag";
 import { Container,Box } from "./style";
 export function Note({ data, ...rest }) {
- 
+
   return (
-    <Container>
+    <Container {...rest}>
       <Box>
         <h1>{data.title}</h1>
         <Stars note={data.note}/>

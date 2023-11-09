@@ -1,23 +1,31 @@
+import { useNavigate } from "react-router-dom";
+import { useAuth } from "../../hooks";
 import { Container, Profile, Logo } from "./styles";
-import { Input } from "../Input";
-import { FiSearch } from "react-icons/fi";
-export function Header() {
+import { api } from "../../services/api";
+import placeholderImg from '../../assets/temp_avatar.svg'
+export function Header({ children }) {
+  const { singOut, user } = useAuth();
+  console.log(user)
+  const navigate = useNavigate();
+  function handleSingOut() {
+    navigate("/");
+    singOut();
+  }
+  const avatarURL = user.avatar ? `${api.defaults.baseURL}/files/${user.avatar}` : placeholderImg
+  console.log(avatarURL)
   return (
     <Container>
       <Logo>
         <h1>RocketMovies</h1>
       </Logo>
-      <main>
-        <Input placeholder="Pesquisar pelo Titulo" icon={FiSearch} />
-      </main>
+      <main>{children}</main>
 
       <Profile to="/profile">
         <div>
-          
-          <strong>Breno-okra</strong>
-          <span>sair</span>
+          <strong>{user.name}</strong>
+          <button onClick={handleSingOut}>sair</button>
         </div>
-        <img src="https://github.com/breno-okra.png" alt="foto do ussuario" />
+        <img src={avatarURL} alt="foto do ussuario" />
       </Profile>
     </Container>
   );

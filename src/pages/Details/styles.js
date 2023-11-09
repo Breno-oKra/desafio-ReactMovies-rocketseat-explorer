@@ -48,14 +48,28 @@ export const Content = styled.div`
     text-align: justify;
   }
   > div:nth-child(2) {
+    width: 100%;
     display: flex;
     gap: 16px;
     align-items: center;
     justify-content: center;
     margin-bottom: 24px;
-    > h2 {
-      font-size: 36px;
-      font-weight: 500;
+    > div {
+      flex: 1;
+      > h2 {
+        font-size: 36px;
+        font-weight: 500;
+      }
+    }
+    >button{
+      background: none;
+      color:${({ theme }) => theme.COLORS.ORANGE} ;
+      border: none;
+      padding: 3px 10px;
+      &:hover{
+        background-color:${({ theme }) => theme.COLORS.ORANGE};
+        color:${({ theme }) => theme.COLORS.BACKGROUND_900} ;
+      }
     }
   }
   > footer {
